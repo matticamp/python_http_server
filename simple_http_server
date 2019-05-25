@@ -1,9 +1,9 @@
 #!/bin/bash
+# SImple script to spawn a Python SimpleHTTPServer.
 
-#cd to a directory entered by the user where the file(s) to serve is (are) found
-#If no directory is entered as a parameter, the server will run in the current working directory.
-# Example use for serving an http server in the Downloads folder: 
-# python python_http_server /root/Downloads 
+# cd to a directory entered by the user where the file(s) to serve is (are) found
+# If no directory is entered as a parameter ($1 isn't provided), the server will run in the current working directory.
+# Example use for serving an http server in the Downloads folder: ./python_http_server.bash /root/Downloads 
 
 cd $1
 
@@ -12,8 +12,10 @@ cd $1
 echo "$(pwd) is now the current directory" 2>/dev/null
 
 # The below command starts python SimpleHTTPServer. 
-#Note: by default, the server will run on port 8000. 
-#If you want/need to use a different port, append the appropriate port number to the below command 
-#(e.g. python -m SimpleHTTPServer 80).
+# Note: by default, the server will run on port 8000. 
+# If you want/need to use a different port, append the appropriate port number to the below command 
+# Example usage:
+# 1) Serving HTTP on port 80: python -m SimpleHTTPServer 80
+# 2) Serving HTTP on port 8080: python -m SimpleHTTPServer 8080
 
 python -m SimpleHTTPServer
