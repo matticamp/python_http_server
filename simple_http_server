@@ -1,5 +1,5 @@
 #!/bin/bash
-# SImple script to spawn a Python SimpleHTTPServer.
+# Simple script to spawn a Python SimpleHTTPServer, created by Mattia Campagnano.
 
 # cd to a directory entered by the user where the file(s) to serve is (are) found
 # If no directory is entered as a parameter ($1 isn't provided), the server will run in the current working directory.
